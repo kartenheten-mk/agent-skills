@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Origo Plugin"
+  short_description: "Build Origo plugins without modifying core"
+  default_prompt: "Use $build-origo-plugin to scaffold, build, and wire a modular Origo plugin while keeping Origo core read-only except for root index.json and index.html."

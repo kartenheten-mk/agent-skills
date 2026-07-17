@@ -1,0 +1,22 @@
+{
+  "name": "plugin-name",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint \"src/**/*.js\"",
+    "build": "npm run lint && npm run build:js && npm run build:css",
+    "build:js": "npm run build:js:readable && npm run build:js:minified",
+    "build:js:readable": "webpack ./src/index.js --mode production --output-path . --output-filename plugin-name.js --output-library-name PluginName --output-library-type var --output-library-export default --no-optimization-minimize --no-optimization-split-chunks --no-output-chunk-loading --no-devtool",
+    "build:js:minified": "webpack ./src/index.js --mode production --output-path . --output-filename plugin-name.min.js --output-library-name PluginName --output-library-type var --output-library-export default --optimization-minimize --no-optimization-split-chunks --no-output-chunk-loading --no-devtool",
+    "build:css": "node ./scripts/build-css.mjs scss/plugin-name.scss plugin-name.css"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "sass-embedded": "^1.86.3",
+    "webpack": "^5.105.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
