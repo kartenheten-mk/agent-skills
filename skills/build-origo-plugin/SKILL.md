@@ -1,7 +1,7 @@
 ---
 name: build-origo-plugin
 description: >-
-  Build, scaffold, create, wire, or update modular Origo plugins while keeping Origo core read-only except for the active root index.json and index.html. Use when Codex needs to create an Origo control-style plugin with JavaScript sources under src, SCSS sources under scss, plugin-local lint and build commands, browser-global JavaScript and CSS artifacts, load-event host registration, index.json dependency configuration, stylesheet wiring, or localized UI text.
+  Create or update modular Origo control plugins, including source code, styling, build setup, host registration, configuration, and localization. Use when work is needed on an Origo plugin under `plugins/{plugin-name}/`, while keeping Origo core read-only except for the active root `index.json` and `index.html`.
 ---
 
 # Build Origo Plugin
